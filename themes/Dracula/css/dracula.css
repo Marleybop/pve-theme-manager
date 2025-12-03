@@ -500,13 +500,19 @@ div[id^="pveResourceTree-"][id$="-body"] {
     text-shadow: -1px 0 1px var(--theme-bg-main) !important;
 }
 
-/* Running status indicator - green accent */
+/* Running/Online status indicator - green accent */
 .x-tree-icon-custom.running::after,
+.x-tree-icon-custom.online::after,
 .x-grid-icon-custom.running::after,
+.x-grid-icon-custom.online::after,
 .x-tree-icon-leaf.running::after,
+.x-tree-icon-leaf.online::after,
 .x-tree-icon-parent.running::after,
+.x-tree-icon-parent.online::after,
 .x-tree-icon-parent-expanded.running::after,
-.fa.running::after {
+.x-tree-icon-parent-expanded.online::after,
+.fa.running::after,
+.fa.online::after {
     color: var(--dracula-green) !important;
 }
 
