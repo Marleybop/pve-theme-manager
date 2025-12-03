@@ -478,30 +478,43 @@ div[id^="pveResourceTree-"][id$="-body"] {
     color: var(--theme-text-secondary) !important;
 }
 
-/* Running status - green accent */
 .x-tree-icon-custom.running,
 .x-grid-icon-custom.running {
-    color: var(--dracula-green) !important;
+    color: var(--theme-text-primary) !important;
 }
 
-/* Stopped status - purple accent */
 .x-tree-icon-custom.stopped,
-.x-grid-icon-custom.stopped {
-    color: var(--dracula-purple) !important;
-    opacity: 0.6;
-}
-
-/* Offline status - orange warning */
 .x-tree-icon-custom.offline,
+.x-grid-icon-custom.stopped,
 .x-grid-icon-custom.offline {
-    color: var(--dracula-orange) !important;
-    opacity: 0.7;
+    color: var(--theme-text-disabled) !important;
 }
 
+/* Status indicator icons (::after overlay) */
 .x-tree-icon-custom::after,
 .x-grid-icon-custom::after {
     color: var(--theme-text-secondary) !important;
     text-shadow: -1px 0 1px var(--theme-bg-main) !important;
+}
+
+/* Running status indicator - green accent */
+.x-tree-icon-custom.running::after,
+.x-grid-icon-custom.running::after {
+    color: var(--dracula-green) !important;
+}
+
+/* Stopped status indicator - purple accent */
+.x-tree-icon-custom.stopped::after,
+.x-grid-icon-custom.stopped::after {
+    color: var(--dracula-purple) !important;
+    opacity: 0.6;
+}
+
+/* Offline status indicator - orange warning */
+.x-tree-icon-custom.offline::after,
+.x-grid-icon-custom.offline::after {
+    color: var(--dracula-orange) !important;
+    opacity: 0.7;
 }
 
 /* Tree expander arrows */

@@ -491,30 +491,43 @@ div[id^="pveResourceTree-"][id$="-body"] {
     color: var(--theme-text-secondary) !important;
 }
 
-/* Running status - use success/green accent */
 .x-tree-icon-custom.running,
 .x-grid-icon-custom.running {
-    color: var(--theme-success) !important;
+    color: var(--theme-text-primary) !important;
 }
 
-/* Stopped status - use primary accent */
 .x-tree-icon-custom.stopped,
-.x-grid-icon-custom.stopped {
-    color: var(--theme-accent-primary) !important;
-    opacity: 0.6;
-}
-
-/* Offline status - use warning color */
 .x-tree-icon-custom.offline,
+.x-grid-icon-custom.stopped,
 .x-grid-icon-custom.offline {
-    color: var(--theme-warning) !important;
-    opacity: 0.7;
+    color: var(--theme-text-disabled) !important;
 }
 
+/* Status indicator icons (::after overlay) */
 .x-tree-icon-custom::after,
 .x-grid-icon-custom::after {
     color: var(--theme-text-secondary) !important;
     text-shadow: -1px 0 1px var(--theme-bg-main) !important;
+}
+
+/* Running status indicator - use success/green accent */
+.x-tree-icon-custom.running::after,
+.x-grid-icon-custom.running::after {
+    color: var(--theme-success) !important;
+}
+
+/* Stopped status indicator - use primary accent */
+.x-tree-icon-custom.stopped::after,
+.x-grid-icon-custom.stopped::after {
+    color: var(--theme-accent-primary) !important;
+    opacity: 0.6;
+}
+
+/* Offline status indicator - use warning color */
+.x-tree-icon-custom.offline::after,
+.x-grid-icon-custom.offline::after {
+    color: var(--theme-warning) !important;
+    opacity: 0.7;
 }
 
 /* Tree expander arrows */
